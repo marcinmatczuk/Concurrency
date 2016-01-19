@@ -46,7 +46,18 @@
 		01856E23177CAEA5001FBB6D /* ViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 01856E22177CAEA5001FBB6D /* ViewUtils.m */; };
 		01A657DB188FC8580060550D /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A657DA188FC8580060550D /* Settings.m */; };
 		01E7EDB718292E750083F979 /* Currencies.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01E7ECBB18292E740083F979 /* Currencies.plist */; };
+		43A683761C4E99B400E90DDE /* ConcurrencyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A683751C4E99B400E90DDE /* ConcurrencyTests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43A683781C4E99B400E90DDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01412CD7177AD4D80070C4B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01412CDE177AD4D80070C4B2;
+			remoteInfo = Concurrency;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0107C2531829335C00D0EFDB /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
@@ -115,6 +126,9 @@
 		01A657D9188FC8580060550D /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		01A657DA188FC8580060550D /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		01E7ECBB18292E740083F979 /* Currencies.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Currencies.plist; sourceTree = "<group>"; };
+		43A683731C4E99B400E90DDE /* ConcurrencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConcurrencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43A683751C4E99B400E90DDE /* ConcurrencyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConcurrencyTests.m; sourceTree = "<group>"; };
+		43A683771C4E99B400E90DDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +139,13 @@
 				01412CE5177AD4D80070C4B2 /* CoreGraphics.framework in Frameworks */,
 				01412CE7177AD4D80070C4B2 /* UIKit.framework in Frameworks */,
 				01412CE3177AD4D80070C4B2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43A683701C4E99B400E90DDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +177,7 @@
 				01412D1B177B3AAE0070C4B2 /* Libraries */,
 				01E7ECB918292E740083F979 /* Resources */,
 				01412CE8177AD4D80070C4B2 /* Classes */,
+				43A683741C4E99B400E90DDE /* ConcurrencyTests */,
 				01412CE1177AD4D80070C4B2 /* Frameworks */,
 				01412CE0177AD4D80070C4B2 /* Products */,
 			);
@@ -165,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				01412CDF177AD4D80070C4B2 /* Concurrency.app */,
+				43A683731C4E99B400E90DDE /* ConcurrencyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -355,6 +378,15 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		43A683741C4E99B400E90DDE /* ConcurrencyTests */ = {
+			isa = PBXGroup;
+			children = (
+				43A683751C4E99B400E90DDE /* ConcurrencyTests.m */,
+				43A683771C4E99B400E90DDE /* Info.plist */,
+			);
+			path = ConcurrencyTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -375,6 +407,24 @@
 			productReference = 01412CDF177AD4D80070C4B2 /* Concurrency.app */;
 			productType = "com.apple.product-type.application";
 		};
+		43A683721C4E99B400E90DDE /* ConcurrencyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43A6837C1C4E99B400E90DDE /* Build configuration list for PBXNativeTarget "ConcurrencyTests" */;
+			buildPhases = (
+				43A6836F1C4E99B400E90DDE /* Sources */,
+				43A683701C4E99B400E90DDE /* Frameworks */,
+				43A683711C4E99B400E90DDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43A683791C4E99B400E90DDE /* PBXTargetDependency */,
+			);
+			name = ConcurrencyTests;
+			productName = ConcurrencyTests;
+			productReference = 43A683731C4E99B400E90DDE /* ConcurrencyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -386,6 +436,10 @@
 				TargetAttributes = {
 					01412CDE177AD4D80070C4B2 = {
 						DevelopmentTeam = 8VQKF583ED;
+					};
+					43A683721C4E99B400E90DDE = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 01412CDE177AD4D80070C4B2;
 					};
 				};
 			};
@@ -403,6 +457,7 @@
 			projectRoot = "";
 			targets = (
 				01412CDE177AD4D80070C4B2 /* Concurrency */,
+				43A683721C4E99B400E90DDE /* ConcurrencyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -423,6 +478,13 @@
 				0107C296182981AA00D0EFDB /* iRate.bundle in Resources */,
 				0107C2541829335C00D0EFDB /* SettingsViewController.xib in Resources */,
 				014319D819EC2A1600851C73 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43A683711C4E99B400E90DDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +523,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43A6836F1C4E99B400E90DDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43A683761C4E99B400E90DDE /* ConcurrencyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43A683791C4E99B400E90DDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01412CDE177AD4D80070C4B2 /* Concurrency */;
+			targetProxy = 43A683781C4E99B400E90DDE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		01412D0F177AD4D80070C4B2 /* Debug */ = {
@@ -562,6 +640,49 @@
 			};
 			name = Release;
 		};
+		43A6837A1C4E99B400E90DDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = ConcurrencyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.matm.ConcurrencyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Concurrency.app/Concurrency";
+			};
+			name = Debug;
+		};
+		43A6837B1C4E99B400E90DDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = ConcurrencyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = io.matm.ConcurrencyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Concurrency.app/Concurrency";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -582,6 +703,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		43A6837C1C4E99B400E90DDE /* Build configuration list for PBXNativeTarget "ConcurrencyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43A6837A1C4E99B400E90DDE /* Debug */,
+				43A6837B1C4E99B400E90DDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
